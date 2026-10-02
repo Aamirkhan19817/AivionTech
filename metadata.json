@@ -1,0 +1,6 @@
+{
+  "name": "AIVION TECH — Software House",
+  "description": "AIVION TECH builds modern websites, mobile applications, AI solutions and custom software.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
