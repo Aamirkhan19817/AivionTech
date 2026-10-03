@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+﻿import React, { useEffect, useState, useRef } from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { Zap, ShieldCheck, Layers, Gauge } from 'lucide-react';
 
@@ -172,3 +172,8 @@ export const StatisticsSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export const TeamCanvas: React.FC = () => {
@@ -50,9 +50,9 @@ export const TeamCanvas: React.FC = () => {
     teamGroup.add(ring);
 
     // Subtle connection network lines representing:
-    // CEO (top-left) ↘
-    // CTO (bottom-left) → AIVION TECH CORE ← CMO (top-right)
-    // HR (bottom-right) ↗
+    // CEO (top-left) â†˜
+    // CTO (bottom-left) â†’ AIVION TECH CORE â† CMO (top-right)
+    // HR (bottom-right) â†—
     const lineMat = new THREE.LineBasicMaterial({
       color: 0x0ea5e9,
       transparent: true,
@@ -156,3 +156,8 @@ export const TeamCanvas: React.FC = () => {
     </div>
   );
 };
+
+
+
+
+

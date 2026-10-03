@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { Activity, Shield, Zap, Database, Check, ChevronDown, ChevronUp, ArrowRight, BarChart2, Layers, Cpu } from 'lucide-react';
 
@@ -124,7 +124,7 @@ export const FlowStack: React.FC = () => {
             <div className="p-4 rounded-xl bg-gray-950/70 border border-white/10">
               <div className="text-xs font-mono text-gray-400">Total Throughput</div>
               <div className="text-2xl font-mono font-bold text-white mt-1">42,890 req/s</div>
-              <div className="text-[11px] text-emerald-400 font-mono mt-1">↑ +14% vs previous 24h</div>
+              <div className="text-[11px] text-emerald-400 font-mono mt-1">â†‘ +14% vs previous 24h</div>
             </div>
             <div className="p-4 rounded-xl bg-gray-950/70 border border-white/10">
               <div className="text-xs font-mono text-gray-400">P99 Edge Latency</div>
@@ -156,7 +156,7 @@ export const FlowStack: React.FC = () => {
           <div className="p-5 rounded-xl bg-black/60 border border-blue-500/20 font-mono text-xs">
             <div className="flex items-center justify-between pb-3 border-b border-white/10 text-gray-400 mb-4">
               <span>REAL-TIME PACKET FLOW // INGRESS SHARDS 01-08</span>
-              <span className="text-blue-400">FPS: 60.0 · LOSS: 0.000%</span>
+              <span className="text-blue-400">FPS: 60.0 Â· LOSS: 0.000%</span>
             </div>
             {/* Visual SVG Telemetry Waveform */}
             <svg viewBox="0 0 600 120" className="w-full h-24 text-blue-400">
@@ -412,10 +412,15 @@ export const FlowStack: React.FC = () => {
             <div className="text-[11px] font-mono mt-0.5">SaaS Platform Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-blue-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-blue-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+
+
+
+
+

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { TECH_STACK } from '../data/companyData';
 import { TechOrbitCanvas } from './TechOrbitCanvas';
 import { Code2, Server, Smartphone, Cpu, Database } from 'lucide-react';
@@ -87,3 +87,8 @@ export const TechSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

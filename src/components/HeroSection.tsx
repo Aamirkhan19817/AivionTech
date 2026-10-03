@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { TunnelWormholeCanvas } from './TunnelWormholeCanvas';
 import { ScrollReveal } from './ScrollReveal';
 import { ArrowDown, Sparkles, ChevronRight } from 'lucide-react';
@@ -23,7 +23,7 @@ export const HeroSection: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-6 text-xs sm:text-sm font-mono tracking-[0.2em] text-cyan-400/90 uppercase">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
             <span>Next-Generation Software House</span>
-            <span className="text-gray-600">·</span>
+            <span className="text-gray-600">Â·</span>
             <span>Digital Laboratory</span>
           </div>
         </ScrollReveal>
@@ -84,3 +84,8 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

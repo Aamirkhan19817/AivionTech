@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { Star, Quote, Building2, ShieldCheck, Sparkles } from 'lucide-react';
 
@@ -62,7 +62,7 @@ export const TestimonialsSection: React.FC = () => {
             <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.25em] text-cyan-400 uppercase mb-3">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>Client Endorsements</span>
-              <span className="text-gray-600">·</span>
+              <span className="text-gray-600">Â·</span>
               <span>Enterprise Trust</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
@@ -149,3 +149,8 @@ export const TestimonialsSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

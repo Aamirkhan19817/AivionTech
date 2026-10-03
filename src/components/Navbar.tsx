@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
@@ -149,3 +149,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     </header>
   );
 };
+
+
+
+
+

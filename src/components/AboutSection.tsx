@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { COMPANY_INFO, ABOUT_PILLARS } from '../data/companyData';
 import { AboutCanvas } from './AboutCanvas';
 import { CheckCircle2 } from 'lucide-react';
@@ -68,3 +68,8 @@ export const AboutSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

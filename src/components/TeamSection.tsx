@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { TEAM_MEMBERS } from '../data/companyData';
 import { TeamCanvas } from './TeamCanvas';
 import { TeamMember } from '../types';
@@ -178,3 +178,8 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
     </div>
   );
 };
+
+
+
+
+

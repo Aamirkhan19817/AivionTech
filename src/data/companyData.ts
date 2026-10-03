@@ -1,4 +1,4 @@
-import { TeamMember, ServiceItem, DemoProject } from '../types';
+﻿import { TeamMember, ServiceItem, DemoProject } from '../types';
 
 export const COMPANY_INFO = {
   name: "AIVION TECH",
@@ -104,9 +104,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/restaurant.html",
     tagline: "Artisan Gastronomy & Midnight Dining Experience",
     description: "A dark, warm, and sophisticated fine dining experience with an artisan tasting menu, sommelier pairings, and seamless real-time table reservations.",
-    style: "Elegant · Dark · Premium · Warm",
+    style: "Elegant Â· Dark Â· Premium Â· Warm",
     accent: "#eab308",
-    image: "/src/assets/images/culinary_noor_table_1790952115305.jpg",
+    image: "/AivionTech/assets/images/culinary_noor_table_1790952115305.jpg",
     highlights: ["Interactive Tasting Menu", "Real-Time Reservation Modal", "Sommelier Cellar Showcase", "Chef's Table Experience"]
   },
   {
@@ -117,9 +117,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/ecommerce.html",
     tagline: "Minimalist Obsidian Hardware & Designer Acoustics",
     description: "An ultra-refined minimal luxury store featuring bespoke acoustic hardware, interactive drawer cart, instant search filtering, and seamless checkout experience.",
-    style: "Modern · Minimal · Premium",
+    style: "Modern Â· Minimal Â· Premium",
     accent: "#06b6d4",
-    image: "/src/assets/images/vanta_minimal_audio_1790952130423.jpg",
+    image: "/AivionTech/assets/images/vanta_minimal_audio_1790952130423.jpg",
     highlights: ["Interactive Drawer Cart", "Instant Category Filtering", "Wishlist & Quick-View Modal", "Zero-Latency Checkout Flow"]
   },
   {
@@ -130,9 +130,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/saas.html",
     tagline: "Unified Cloud Infrastructure & Developer Velocity",
     description: "A high-velocity SaaS operations platform with interactive telemetry graphs, feature tabs, annual/monthly pricing calculator, and enterprise ROI proof.",
-    style: "Sleek · High-Velocity · Cloud Native",
+    style: "Sleek Â· High-Velocity Â· Cloud Native",
     accent: "#3b82f6",
-    image: "/src/assets/images/saas_flowstack_preview_1790954815731.jpg",
+    image: "/AivionTech/assets/images/saas_flowstack_preview_1790954815731.jpg",
     highlights: ["Live Analytics Dashboard Preview", "Monthly/Annual Pricing Toggle", "Feature Capability Matrix", "Interactive FAQ Accordion"]
   },
   {
@@ -143,9 +143,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/ai.html",
     tagline: "Autonomous Machine Intelligence & Model Workflows",
     description: "A technical AI platform featuring real-time neural topology rendering, inference latency metrics, automated pipeline orchestrator, and interactive model playground.",
-    style: "Futuristic · Technical · Advanced",
+    style: "Futuristic Â· Technical Â· Advanced",
     accent: "#10b981",
-    image: "/src/assets/images/ai_neuralcore_preview_1790954831631.jpg",
+    image: "/AivionTech/assets/images/ai_neuralcore_preview_1790954831631.jpg",
     highlights: ["Live Neural Network Topology", "Inference Benchmark Simulator", "Automated Pipeline Engine", "Enterprise Model Endpoints"]
   },
   {
@@ -156,9 +156,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/mobile-app.html",
     tagline: "Biometric Telemetry & Autonomous Wellness OS",
     description: "An interactive mobile application showcase featuring an interactive 3D phone frame mockup with screen switching, health metrics telemetry, and QR download simulator.",
-    style: "Dynamic · Ergonomic · Mobile-First",
+    style: "Dynamic Â· Ergonomic Â· Mobile-First",
     accent: "#ec4899",
-    image: "/src/assets/images/mobile_pulse_preview_1790954847686.jpg",
+    image: "/AivionTech/assets/images/mobile_pulse_preview_1790954847686.jpg",
     highlights: ["Interactive 3D Phone Screen Switcher", "Biometric Vitals Dashboard", "Haptic Experience Showcase", "Instant QR App Clip Demo"]
   },
   {
@@ -169,9 +169,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/real-estate.html",
     tagline: "Architectural Masterpieces & Prime Coastal Sanctuaries",
     description: "A luxury architectural property showcase with dynamic price and typography filters, interactive floorplan viewer, private showing reservation, and curated locations.",
-    style: "Luxury · Elegant · Professional",
+    style: "Luxury Â· Elegant Â· Professional",
     accent: "#f59e0b",
-    image: "/src/assets/images/arcstone_luxury_villa_1790952149752.jpg",
+    image: "/AivionTech/assets/images/arcstone_luxury_villa_1790952149752.jpg",
     highlights: ["Filter by Price & Archetype", "Full-Screen Architectural Modal", "Interactive Virtual Showing Form", "Global Sanctuary Locations"]
   },
   {
@@ -182,9 +182,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/corporate.html",
     tagline: "Strategic Capital & Enterprise Transformation",
     description: "A commanding enterprise advisory platform with interactive global performance metrics, sector dossiers, senior advisory governance, and private inquiry desk.",
-    style: "Authoritative · Global · Strategic",
+    style: "Authoritative Â· Global Â· Strategic",
     accent: "#64748b",
-    image: "/src/assets/images/vertex_corporate_hq_1790954179058.jpg",
+    image: "/AivionTech/assets/images/vertex_corporate_hq_1790954179058.jpg",
     highlights: ["Key Enterprise Indicators", "Global Sector Focus Areas", "Advisory Governance Board", "Institutional Inquiry Portal"]
   },
   {
@@ -195,9 +195,9 @@ export const DEMO_PROJECTS: DemoProject[] = [
     htmlPath: "/demos/creative-studio.html",
     tagline: "Kinetic Spatial Art & Avant-Garde Digital Objects",
     description: "An experimental brutalist digital atelier featuring dynamic kinetic project showcases, multidisciplinary manifesto, typography experiments, and custom commissions.",
-    style: "Editorial · Creative · Experimental",
+    style: "Editorial Â· Creative Â· Experimental",
     accent: "#a855f7",
-    image: "/src/assets/images/mono_studio_art_1790952166074.jpg",
+    image: "/AivionTech/assets/images/mono_studio_art_1790952166074.jpg",
     highlights: ["Kinetic Art Installation Gallery", "Disciplinary Philosophy Manifesto", "Full-Bleed Exhibition Modal", "Commission Request Portal"]
   }
 ];
@@ -236,3 +236,4 @@ export const PROCESS_STEPS = [
     detail: "Comprehensive automated and manual QA, load stress testing, deployment, and seamless production handover."
   }
 ];
+

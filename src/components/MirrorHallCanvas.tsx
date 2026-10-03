@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 interface MirrorHallCanvasProps {
@@ -198,3 +198,8 @@ export const MirrorHallCanvas: React.FC<MirrorHallCanvasProps> = ({ activeIndex 
     </div>
   );
 };
+
+
+
+
+

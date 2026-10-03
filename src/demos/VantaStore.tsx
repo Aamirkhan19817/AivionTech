@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { ShoppingBag, Heart, Search, X, Plus, Minus, ArrowRight, ShieldCheck, Truck, RefreshCw, CheckCircle2 } from 'lucide-react';
 
@@ -18,7 +18,7 @@ export const VantaStore: React.FC = () => {
       name: 'Vanta Obsidian ANC Headphones',
       price: 480,
       qty: 1,
-      image: '/src/assets/images/vanta_minimal_audio_1790952130423.jpg',
+      image: '/AivionTech/assets/images/vanta_minimal_audio_1790952130423.jpg',
       category: 'Acoustics',
     },
   ]);
@@ -36,7 +36,7 @@ export const VantaStore: React.FC = () => {
       name: 'Vanta Obsidian ANC Headphones',
       category: 'Acoustics',
       price: 480,
-      image: '/src/assets/images/vanta_minimal_audio_1790952130423.jpg',
+      image: '/AivionTech/assets/images/vanta_minimal_audio_1790952130423.jpg',
       desc: 'Bespoke planar magnetic drivers encased in matte bead-blasted aircraft titanium.',
     },
     {
@@ -44,7 +44,7 @@ export const VantaStore: React.FC = () => {
       name: 'Monolith Solid Aluminum Keyboard',
       category: 'Peripherals',
       price: 360,
-      image: '/src/assets/images/vanta_keyboard_product_1790954217600.jpg',
+      image: '/AivionTech/assets/images/vanta_keyboard_product_1790954217600.jpg',
       desc: 'Gasket-mounted bespoke tactile switches with hand-lathed PVD brass counterweight.',
     },
     {
@@ -52,7 +52,7 @@ export const VantaStore: React.FC = () => {
       name: 'Linear Desk Lamp in Cold Black',
       category: 'Workspace',
       price: 240,
-      image: '/src/assets/images/vanta_desk_lamp_1790954420042.jpg',
+      image: '/AivionTech/assets/images/vanta_desk_lamp_1790954420042.jpg',
       desc: '98 CRI continuous circadian spectrum illumination with rotary dimmer dial.',
     },
     {
@@ -60,7 +60,7 @@ export const VantaStore: React.FC = () => {
       name: 'Precision Wireless Trackball Mouse',
       category: 'Peripherals',
       price: 190,
-      image: '/src/assets/images/vanta_mouse_1790954436474.jpg',
+      image: '/AivionTech/assets/images/vanta_mouse_1790954436474.jpg',
       desc: 'Optical ceramic sensor ball with silent tactile switches and carbon shell.',
     },
     {
@@ -68,7 +68,7 @@ export const VantaStore: React.FC = () => {
       name: 'Acoustic Desktop Resonance Blocks',
       category: 'Acoustics',
       price: 150,
-      image: '/src/assets/images/vanta_speakers_1790954452315.jpg',
+      image: '/AivionTech/assets/images/vanta_speakers_1790954452315.jpg',
       desc: 'Dense composite damping isolation wedges designed for studio monitors.',
     },
     {
@@ -76,7 +76,7 @@ export const VantaStore: React.FC = () => {
       name: 'Sovereign Leather Desk Mat (XL)',
       category: 'Workspace',
       price: 110,
-      image: '/src/assets/images/vanta_desk_setup_1790954467516.jpg',
+      image: '/AivionTech/assets/images/vanta_desk_setup_1790954467516.jpg',
       desc: 'Vegetable-tanned full-grain matte Tuscan hide with non-slip suede underlay.',
     },
   ];
@@ -211,7 +211,7 @@ export const VantaStore: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-gray-900 group">
               <img
-                src="/src/assets/images/vanta_minimal_audio_1790952130423.jpg"
+                src="/AivionTech/assets/images/vanta_minimal_audio_1790952130423.jpg"
                 alt="Vanta Obsidian Headphones"
                 className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -476,10 +476,11 @@ export const VantaStore: React.FC = () => {
             <div className="text-[11px] font-mono mt-0.5">E-Commerce Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-cyan-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-cyan-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+

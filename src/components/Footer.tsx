@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { COMPANY_INFO, SERVICES } from '../data/companyData';
 import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -124,12 +124,12 @@ export const Footer: React.FC = () => {
         <ScrollReveal variant="fade-in" delay={400}>
           <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs text-gray-400 font-mono">
-              © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
+              Â© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
             </div>
 
             <div className="flex items-center gap-6">
               <span className="text-[11px] font-mono text-gray-400">
-                SOFTWARE HOUSE · {COMPANY_INFO.tagline}
+                SOFTWARE HOUSE Â· {COMPANY_INFO.tagline}
               </span>
               <button
                 onClick={scrollToTop}
@@ -145,3 +145,8 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
+
+
+
+

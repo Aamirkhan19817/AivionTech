@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { PROCESS_STEPS } from '../data/companyData';
 import { Compass, Palette, Terminal, Rocket } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -89,3 +89,8 @@ export const ProcessSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export const TechOrbitCanvas: React.FC = () => {
@@ -176,3 +176,8 @@ export const TechOrbitCanvas: React.FC = () => {
     </div>
   );
 };
+
+
+
+
+

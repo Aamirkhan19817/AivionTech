@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -28,7 +28,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     if (!element) return;
 
     // Small delay so the browser renders the element in its HIDDEN state first
-    // Then the observer fires and animates it in — this gives page-load animations too
+    // Then the observer fires and animates it in â€” this gives page-load animations too
     const startTimer = setTimeout(() => {
       observerRef.current = new IntersectionObserver(
         ([entry]) => {
@@ -53,7 +53,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     };
   }, [threshold, once]);
 
-  // ─── Transform definitions ────────────────────────────────────────────────
+  // â”€â”€â”€ Transform definitions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   const getHiddenTransform = () => {
     switch (variant) {
@@ -91,7 +91,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     return 'blur(0px)';
   };
 
-  // ─── Build final style ────────────────────────────────────────────────────
+  // â”€â”€â”€ Build final style â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   const style: React.CSSProperties = {
     opacity: isVisible ? 1 : 0,
@@ -111,3 +111,8 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     </div>
   );
 };
+
+
+
+
+

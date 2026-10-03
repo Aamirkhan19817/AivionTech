@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { COMPANY_INFO } from '../data/companyData';
 import { Mail, Phone, MapPin, Send, CheckCircle, Copy, Check } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -37,7 +37,7 @@ export const ContactSection: React.FC = () => {
           },
           body: JSON.stringify({
             access_key: accessKey,
-            subject: 'New Client Inquiry — Aiviontech Website',
+            subject: 'New Client Inquiry â€” Aiviontech Website',
             from_name: formData.name,
             ...formData,
           }),
@@ -199,7 +199,7 @@ export const ContactSection: React.FC = () => {
                   {/* Text with staggered reveal */}
                   <div style={{ animation: 'fadeSlideUp 0.6s ease-out 0.7s both' }}>
                     <div className="text-xs font-mono tracking-[0.3em] text-cyan-400 uppercase mb-2">
-                      ✦ MESSAGE SENT ✦
+                      âœ¦ MESSAGE SENT âœ¦
                     </div>
                     <h3 className="font-display font-bold text-3xl text-white mb-3">
                       Inquiry Recorded
@@ -380,3 +380,8 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export const AboutCanvas: React.FC = () => {
@@ -197,3 +197,8 @@ export const AboutCanvas: React.FC = () => {
     </div>
   );
 };
+
+
+
+
+

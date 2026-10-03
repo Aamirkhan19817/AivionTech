@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { Calendar, Clock, Users, Wine, Utensils, Star, CheckCircle2, ChevronRight, X, Phone, MapPin } from 'lucide-react';
 
@@ -26,13 +26,13 @@ export const NoorTable: React.FC = () => {
       name: 'Smoked Saffron Hokkaido Scallop',
       description: 'Osetra caviar, wild coastal sea herbs, charred dashi emulsion, preserved Meyer lemon foam.',
       price: '$42',
-      pairing: 'Dom Pérignon Vintage 2013',
+      pairing: 'Dom PÃ©rignon Vintage 2013',
     },
     {
       name: 'Charred A5 Miyazaki Wagyu',
       description: 'Black winter truffle crust, smoked parsnip puree, bone marrow glaze, pickled chanterelles.',
       price: '$98',
-      pairing: 'Château Margaux Premier Grand Cru',
+      pairing: 'ChÃ¢teau Margaux Premier Grand Cru',
     },
     {
       name: 'Aged Duck Breast in Spiced Fig',
@@ -67,9 +67,9 @@ export const NoorTable: React.FC = () => {
   ];
 
   const cellarMenu = [
-    { name: 'Krug Clos d’Ambonnay Champagne', region: 'Reims, France · 2008', price: '$2,800' },
-    { name: 'Domaine de la Romanée-Conti', region: 'Burgundy, France · 2017', price: '$4,200' },
-    { name: 'Screaming Eagle Cabernet Sauvignon', region: 'Oakville, Napa Valley · 2019', price: '$3,600' },
+    { name: 'Krug Clos dâ€™Ambonnay Champagne', region: 'Reims, France Â· 2008', price: '$2,800' },
+    { name: 'Domaine de la RomanÃ©e-Conti', region: 'Burgundy, France Â· 2017', price: '$4,200' },
+    { name: 'Screaming Eagle Cabernet Sauvignon', region: 'Oakville, Napa Valley Â· 2019', price: '$3,600' },
   ];
 
   return (
@@ -108,7 +108,7 @@ export const NoorTable: React.FC = () => {
         {/* Background Image with warm dark scrim */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/culinary_noor_table_1790952115305.jpg"
+            src="/AivionTech/assets/images/culinary_noor_table_1790952115305.jpg"
             alt="Noor Table Gastronomy"
             className="w-full h-full object-cover brightness-[0.38] contrast-125 scale-105"
             referrerPolicy="no-referrer"
@@ -119,7 +119,7 @@ export const NoorTable: React.FC = () => {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.3em] uppercase text-amber-400/90 mb-6">
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-            <span>Michelin Guide Recognized · Artisan Culinary Sanctuary</span>
+            <span>Michelin Guide Recognized Â· Artisan Culinary Sanctuary</span>
           </div>
 
           <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-white mb-6 leading-tight">
@@ -179,7 +179,7 @@ export const NoorTable: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-lg overflow-hidden border border-[#3c2e26] shadow-2xl">
               <img
-                src="/src/assets/images/noor_cellar_interior_1790954232863.jpg"
+                src="/AivionTech/assets/images/noor_cellar_interior_1790954232863.jpg"
                 alt="Culinary Preparation"
                 className="w-full h-96 object-cover brightness-90 hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -204,7 +204,7 @@ export const NoorTable: React.FC = () => {
             <div className="group rounded-xl overflow-hidden bg-[#140e0b] border border-[#2d221c] p-4 flex flex-col sm:flex-row gap-5 items-center">
               <div className="relative w-full sm:w-44 aspect-square rounded-lg overflow-hidden shrink-0">
                 <img
-                  src="/src/assets/images/culinary_noor_table_1790952115305.jpg"
+                  src="/AivionTech/assets/images/culinary_noor_table_1790952115305.jpg"
                   alt="Smoked Saffron Hokkaido Scallop"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -216,14 +216,14 @@ export const NoorTable: React.FC = () => {
                 <p className="text-xs text-[#9e8d80] mt-1.5 leading-relaxed">
                   Osetra caviar, wild coastal sea herbs, charred dashi emulsion, preserved Meyer lemon foam.
                 </p>
-                <div className="text-sm font-mono text-amber-400 font-bold mt-3">$42 · Pair with Dom Pérignon</div>
+                <div className="text-sm font-mono text-amber-400 font-bold mt-3">$42 Â· Pair with Dom PÃ©rignon</div>
               </div>
             </div>
 
             <div className="group rounded-xl overflow-hidden bg-[#140e0b] border border-[#2d221c] p-4 flex flex-col sm:flex-row gap-5 items-center">
               <div className="relative w-full sm:w-44 aspect-square rounded-lg overflow-hidden shrink-0">
                 <img
-                  src="/src/assets/images/noor_wagyu_dish_1790954163919.jpg"
+                  src="/AivionTech/assets/images/noor_wagyu_dish_1790954163919.jpg"
                   alt="Charred A5 Miyazaki Wagyu"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -235,14 +235,14 @@ export const NoorTable: React.FC = () => {
                 <p className="text-xs text-[#9e8d80] mt-1.5 leading-relaxed">
                   Black winter truffle crust, smoked parsnip puree, bone marrow glaze, pickled chanterelles.
                 </p>
-                <div className="text-sm font-mono text-amber-400 font-bold mt-3">$98 · Pair with Château Margaux</div>
+                <div className="text-sm font-mono text-amber-400 font-bold mt-3">$98 Â· Pair with ChÃ¢teau Margaux</div>
               </div>
             </div>
 
             <div className="group rounded-xl overflow-hidden bg-[#140e0b] border border-[#2d221c] p-4 flex flex-col sm:flex-row gap-5 items-center">
               <div className="relative w-full sm:w-44 aspect-square rounded-lg overflow-hidden shrink-0">
                 <img
-                  src="/src/assets/images/noor_dessert_1790954482632.jpg"
+                  src="/AivionTech/assets/images/noor_dessert_1790954482632.jpg"
                   alt="Valrhona Noir 72% Sphere"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -254,14 +254,14 @@ export const NoorTable: React.FC = () => {
                 <p className="text-xs text-[#9e8d80] mt-1.5 leading-relaxed">
                   Smoked cardamom ganache, edible 24k gold leaf, bourbon barrel Madagascar vanilla bean infusion.
                 </p>
-                <div className="text-sm font-mono text-amber-400 font-bold mt-3">$28 · Pair with 40-Year Tawny Port</div>
+                <div className="text-sm font-mono text-amber-400 font-bold mt-3">$28 Â· Pair with 40-Year Tawny Port</div>
               </div>
             </div>
 
             <div className="group rounded-xl overflow-hidden bg-[#140e0b] border border-[#2d221c] p-4 flex flex-col sm:flex-row gap-5 items-center">
               <div className="relative w-full sm:w-44 aspect-square rounded-lg overflow-hidden shrink-0">
                 <img
-                  src="/src/assets/images/noor_chef_1790954498436.jpg"
+                  src="/AivionTech/assets/images/noor_chef_1790954498436.jpg"
                   alt="Executive Culinary Hearth"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -273,7 +273,7 @@ export const NoorTable: React.FC = () => {
                 <p className="text-xs text-[#9e8d80] mt-1.5 leading-relaxed">
                   Watch our Michelin-starred culinary brigade compose delicate seasonal courses right before your eyes.
                 </p>
-                <div className="text-sm font-mono text-amber-400 font-bold mt-3">Chef’s Counter Exclusive</div>
+                <div className="text-sm font-mono text-amber-400 font-bold mt-3">Chefâ€™s Counter Exclusive</div>
               </div>
             </div>
           </div>
@@ -301,7 +301,7 @@ export const NoorTable: React.FC = () => {
                       : 'text-[#9c8b7e] hover:text-white bg-[#1a120f] border border-[#2d221c]'
                   }`}
                 >
-                  {cat === 'tasting' ? 'Tasting Menu' : cat === 'mains' ? 'À La Carte' : 'Grand Cellar'}
+                  {cat === 'tasting' ? 'Tasting Menu' : cat === 'mains' ? 'Ã€ La Carte' : 'Grand Cellar'}
                 </button>
               ))}
             </div>
@@ -431,10 +431,10 @@ export const NoorTable: React.FC = () => {
                       onChange={(e) => setResForm({ ...resForm, guests: e.target.value })}
                       className="w-full bg-[#0d0908] border border-[#2d221c] rounded p-2 text-xs text-white"
                     >
-                      <option value="1">1 Guest · Chef's Counter</option>
-                      <option value="2">2 Guests · Intimate Table</option>
-                      <option value="4">4 Guests · Main Dining</option>
-                      <option value="6">6 Guests · Private Alcove</option>
+                      <option value="1">1 Guest Â· Chef's Counter</option>
+                      <option value="2">2 Guests Â· Intimate Table</option>
+                      <option value="4">4 Guests Â· Main Dining</option>
+                      <option value="6">6 Guests Â· Private Alcove</option>
                     </select>
                   </div>
 
@@ -484,16 +484,17 @@ export const NoorTable: React.FC = () => {
           </div>
           <div className="flex gap-6">
             <span>Valet Parking Available</span>
-            <span>·</span>
+            <span>Â·</span>
             <span>Formal Attire Recommended</span>
-            <span>·</span>
+            <span>Â·</span>
             <span>Reservations 30 Days in Advance</span>
           </div>
           <div>
-            <a href="/" className="text-amber-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-amber-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+

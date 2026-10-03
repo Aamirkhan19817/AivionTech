@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DEMO_PROJECTS } from '../data/companyData';
 import { MirrorHallCanvas } from './MirrorHallCanvas';
 import { ExternalLink, Layers, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -28,7 +28,7 @@ export const MirrorHallSection: React.FC = () => {
             <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.25em] text-cyan-400 uppercase mb-3">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>Digital Exhibition</span>
-              <span className="text-gray-600">·</span>
+              <span className="text-gray-600">Â·</span>
               <span>8 Live Production Demos</span>
             </div>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
@@ -260,7 +260,7 @@ export const MirrorHallSection: React.FC = () => {
                   </div>
                   <div className="mt-3 text-[10px] font-mono text-cyan-400/90 tracking-wider flex items-center justify-between pt-2 border-t border-white/5">
                     <span>Launch Demo</span>
-                    <span>→</span>
+                    <span>â†’</span>
                   </div>
                 </a>
               ))}
@@ -271,3 +271,8 @@ export const MirrorHallSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

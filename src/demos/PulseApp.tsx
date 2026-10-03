@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { Smartphone, Heart, Moon, Zap, Flame, QrCode, Download, Apple, Play, CheckCircle2, X } from 'lucide-react';
 
@@ -367,10 +367,15 @@ export const PulseApp: React.FC = () => {
             <div className="text-[11px] mt-0.5">Mobile Application Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-pink-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-pink-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+
+
+
+
+

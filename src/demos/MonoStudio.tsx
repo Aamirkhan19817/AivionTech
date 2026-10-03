@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { ArrowUpRight, Sparkles, X, Plus } from 'lucide-react';
 
@@ -20,10 +20,10 @@ export const MonoStudio: React.FC = () => {
     {
       id: 'mono-01',
       title: 'Monolithic Void Installation',
-      client: 'Fondation d’Art Moderne',
+      client: 'Fondation dâ€™Art Moderne',
       category: 'Spatial Art',
       year: '2026',
-      image: '/src/assets/images/mono_studio_art_1790952166074.jpg',
+      image: '/AivionTech/assets/images/mono_studio_art_1790952166074.jpg',
       desc: 'A brutalist kinetic sculpture reacting to ambient electromagnetic radiation and human proximity in a concrete gallery pavilion.',
     },
     {
@@ -32,7 +32,7 @@ export const MonoStudio: React.FC = () => {
       client: 'Venice Biennale Architettura',
       category: 'Interactive Typography',
       year: '2026',
-      image: '/src/assets/images/mono_typography_art_1790954200104.jpg',
+      image: '/AivionTech/assets/images/mono_typography_art_1790954200104.jpg',
       desc: 'Real-time generative typography engine morphing letterforms according to tidal rhythms and wind velocity.',
     },
     {
@@ -41,7 +41,7 @@ export const MonoStudio: React.FC = () => {
       client: 'Kyoto Design Triennale',
       category: 'Spatial Art',
       year: '2025',
-      image: '/src/assets/images/mono_chromatics_pavilion_1790954653501.jpg',
+      image: '/AivionTech/assets/images/mono_chromatics_pavilion_1790954653501.jpg',
       desc: 'Dichroic glass acoustic installation reflecting shifting daylight hues across raw monolithic cedar timber.',
     },
     {
@@ -50,7 +50,7 @@ export const MonoStudio: React.FC = () => {
       client: 'Atelier Nocturne Paris',
       category: 'Digital Atelier',
       year: '2025',
-      image: '/src/assets/images/mono_virtual_brand_1790954669064.jpg',
+      image: '/AivionTech/assets/images/mono_virtual_brand_1790954669064.jpg',
       desc: 'Hyper-minimalist 3D WebGL commerce experience sculpted with ray-traced shadows and ambient spatial audio.',
     },
   ];
@@ -188,7 +188,7 @@ export const MonoStudio: React.FC = () => {
           "We reject decorative ornamentation. True spatial power arrives through austere materials, monolithic gravity, and the choreography of darkness."
         </p>
         <div className="mt-8 text-xs font-mono text-gray-500 uppercase tracking-widest">
-          Mono Atelier // Tokyo · Paris · Zürich
+          Mono Atelier // Tokyo Â· Paris Â· ZÃ¼rich
         </div>
       </section>
 
@@ -202,7 +202,7 @@ export const MonoStudio: React.FC = () => {
             >
               <X className="w-5 h-5" />
             </button>
-            <div className="text-xs font-mono uppercase text-purple-400 mb-1">{selectedProject.category} · {selectedProject.year}</div>
+            <div className="text-xs font-mono uppercase text-purple-400 mb-1">{selectedProject.category} Â· {selectedProject.year}</div>
             <h2 className="font-display font-black text-3xl text-white mb-2">{selectedProject.title}</h2>
             <div className="text-xs font-mono text-gray-400 mb-6">Commissioned by {selectedProject.client}</div>
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">{selectedProject.desc}</p>
@@ -224,10 +224,11 @@ export const MonoStudio: React.FC = () => {
             <div className="text-[11px] mt-0.5">Creative Studio Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-purple-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-purple-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+

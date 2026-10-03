@@ -1,4 +1,4 @@
-export interface TeamMember {
+﻿export interface TeamMember {
   id: string;
   name: string;
   role: string;
@@ -29,3 +29,8 @@ export interface DemoProject {
   image?: string;
   highlights: string[];
 }
+
+
+
+
+

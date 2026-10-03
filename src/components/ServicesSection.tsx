@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { SERVICES } from '../data/companyData';
 import { Globe, Smartphone, Cpu, Code, ArrowRight } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -123,3 +123,8 @@ export const ServicesSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+

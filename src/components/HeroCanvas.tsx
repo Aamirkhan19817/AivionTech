@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export const HeroCanvas: React.FC = () => {
@@ -279,3 +279,8 @@ export const HeroCanvas: React.FC = () => {
     </div>
   );
 };
+
+
+
+
+

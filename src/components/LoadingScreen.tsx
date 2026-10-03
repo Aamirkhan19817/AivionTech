@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -40,7 +40,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           setTimeout(() => {
             setPhase('exit');
 
-            // Done — reveal main site
+            // Done â€” reveal main site
             setTimeout(() => {
               onComplete();
             }, 700);
@@ -108,7 +108,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         pointerEvents: 'none',
       }} />
 
-      {/* ─── COUNTING PHASE ─── */}
+      {/* â”€â”€â”€ COUNTING PHASE â”€â”€â”€ */}
       <div
         style={{
           position: 'relative',
@@ -194,7 +194,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* ─── WELCOME PHASE ─── */}
+      {/* â”€â”€â”€ WELCOME PHASE â”€â”€â”€ */}
       {(phase === 'welcome' || phase === 'exit') && (
         <div style={{
           position: 'relative',
@@ -222,7 +222,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             animation: 'fadeUp 0.5s ease-out 0.1s both',
             opacity: 0,
           }}>
-            ✦ Welcome To ✦
+            âœ¦ Welcome To âœ¦
           </div>
 
           <div style={{
@@ -280,3 +280,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     </div>
   );
 };
+
+
+
+
+

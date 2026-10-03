@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { Globe2, TrendingUp, ShieldCheck, Briefcase, Users, ChevronRight, CheckCircle2 } from 'lucide-react';
 
@@ -42,7 +42,7 @@ export const VertexGroup: React.FC = () => {
         {/* Background Skyscraper Backdrop */}
         <div className="relative rounded-2xl overflow-hidden mb-12 aspect-[21/9] border border-white/10 shadow-2xl">
           <img
-            src="/src/assets/images/vertex_corporate_hq_1790954179058.jpg"
+            src="/AivionTech/assets/images/vertex_corporate_hq_1790954179058.jpg"
             alt="Vertex Group Global Headquarters"
             className="w-full h-full object-cover brightness-[0.45] contrast-110"
             referrerPolicy="no-referrer"
@@ -50,7 +50,7 @@ export const VertexGroup: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#060910] via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 text-left">
             <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase bg-slate-900/80 px-2.5 py-1 rounded border border-white/10">
-              GLOBAL HQ // LONDON · NEW YORK · SINGAPORE
+              GLOBAL HQ // LONDON Â· NEW YORK Â· SINGAPORE
             </span>
             <div className="font-serif text-xl sm:text-2xl text-white font-normal mt-2">
               Sovereign Capital & Cross-Border Advisory
@@ -149,7 +149,7 @@ export const VertexGroup: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
               <img
-                src="/src/assets/images/vertex_boardroom_1790954515205.jpg"
+                src="/AivionTech/assets/images/vertex_boardroom_1790954515205.jpg"
                 alt="Vertex Group Global Boardroom"
                 className="w-full h-80 sm:h-96 object-cover brightness-90 group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -224,10 +224,11 @@ export const VertexGroup: React.FC = () => {
             <div className="text-[11px] mt-0.5">Corporate Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-slate-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-slate-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+

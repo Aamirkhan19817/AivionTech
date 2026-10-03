@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { Cpu, Terminal, Play, RotateCcw, Zap, GitBranch, Layers, ShieldAlert, CheckCircle2 } from 'lucide-react';
 
@@ -279,10 +279,15 @@ export const NeuralCore: React.FC = () => {
             <div className="text-[11px] mt-0.5">AI/ML Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-emerald-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-emerald-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+
+
+
+
+

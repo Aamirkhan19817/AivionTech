@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { DemoHeader } from './DemoHeader';
 import { Building2, Bed, Bath, Maximize, MapPin, CheckCircle2, X, ChevronRight, Phone } from 'lucide-react';
 
@@ -29,7 +29,7 @@ export const Arcstone: React.FC = () => {
       beds: 5,
       baths: 6,
       sqft: '8,400 sq ft',
-      image: '/src/assets/images/arcstone_luxury_villa_1790952149752.jpg',
+      image: '/AivionTech/assets/images/arcstone_luxury_villa_1790952149752.jpg',
       archetype: 'Coastal Villa',
       desc: 'Cantilevered architectural residence anchored into sea cliffs with radiant infinity pool and subterranean wine cellar.',
     },
@@ -41,7 +41,7 @@ export const Arcstone: React.FC = () => {
       beds: 4,
       baths: 5,
       sqft: '6,200 sq ft',
-      image: '/src/assets/images/arcstone_penthouse_1790954114244.jpg',
+      image: '/AivionTech/assets/images/arcstone_penthouse_1790954114244.jpg',
       archetype: 'Urban Penthouse',
       desc: '360-degree skyline panorama with private elevator vestibule, wrap-around limestone terrace, and custom Boffi kitchen.',
     },
@@ -53,7 +53,7 @@ export const Arcstone: React.FC = () => {
       beds: 6,
       baths: 7,
       sqft: '7,800 sq ft',
-      image: '/src/assets/images/arcstone_chalet_1790954133304.jpg',
+      image: '/AivionTech/assets/images/arcstone_chalet_1790954133304.jpg',
       archetype: 'Alpine Chalet',
       desc: 'Geothermal ski-in chalet carved from natural alpine stone with heated outdoor mineral plunge pool and Matterhorn views.',
     },
@@ -65,7 +65,7 @@ export const Arcstone: React.FC = () => {
       beds: 5,
       baths: 6,
       sqft: '9,100 sq ft',
-      image: '/src/assets/images/arcstone_coastal_1790954148486.jpg',
+      image: '/AivionTech/assets/images/arcstone_coastal_1790954148486.jpg',
       archetype: 'Coastal Villa',
       desc: 'Private gated oceanfront promontory surrounded by black basalt rock, lush botanical gardens, and deep water yacht mooring.',
     },
@@ -77,7 +77,7 @@ export const Arcstone: React.FC = () => {
       beds: 4,
       baths: 5,
       sqft: '6,800 sq ft',
-      image: '/src/assets/images/arcstone_city_residence_1790954617128.jpg',
+      image: '/AivionTech/assets/images/arcstone_city_residence_1790954617128.jpg',
       archetype: 'Urban Penthouse',
       desc: 'Brutalist urban sanctuary with textured volcanic stone facades, illuminated internal zen courtyard, and subterranean motor vault.',
     },
@@ -89,7 +89,7 @@ export const Arcstone: React.FC = () => {
       beds: 5,
       baths: 6,
       sqft: '7,500 sq ft',
-      image: '/src/assets/images/arcstone_desert_villa_1790954585486.jpg',
+      image: '/AivionTech/assets/images/arcstone_desert_villa_1790954585486.jpg',
       archetype: 'Desert Villa',
       desc: 'Minimalist desert pavilion constructed of thermal rammed earth with vast cantilevered rooflines, sunset infinity reflection pool, and desert mountain vistas.',
     },
@@ -101,7 +101,7 @@ export const Arcstone: React.FC = () => {
       beds: 5,
       baths: 6,
       sqft: '8,100 sq ft',
-      image: '/src/assets/images/arcstone_forest_retreat_1790954602098.jpg',
+      image: '/AivionTech/assets/images/arcstone_forest_retreat_1790954602098.jpg',
       archetype: 'Forest Retreat',
       desc: 'Modernist glass and charred cedar retreat suspended gracefully over a misty mountain stream with glowing hearth and floor-to-ceiling thermal glazing.',
     },
@@ -113,7 +113,7 @@ export const Arcstone: React.FC = () => {
       beds: 6,
       baths: 7,
       sqft: '9,400 sq ft',
-      image: '/src/assets/images/arcstone_contemporary_home_1790954634423.jpg',
+      image: '/AivionTech/assets/images/arcstone_contemporary_home_1790954634423.jpg',
       archetype: 'Contemporary Mansion',
       desc: 'Avant-garde sculptural concrete home with sweeping curvilinear white surfaces, double-height curved glass curtain walls, and tranquil perimeter reflection pools.',
     },
@@ -155,7 +155,7 @@ export const Arcstone: React.FC = () => {
       <section className="relative min-h-[80vh] flex items-center justify-center px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/arcstone_luxury_villa_1790952149752.jpg"
+            src="/AivionTech/assets/images/arcstone_luxury_villa_1790952149752.jpg"
             alt="Arcstone Luxury Villa"
             className="w-full h-full object-cover brightness-[0.35]"
             referrerPolicy="no-referrer"
@@ -306,7 +306,7 @@ export const Arcstone: React.FC = () => {
                   Estate Dossier // {selectedProperty.archetype}
                 </div>
                 <h2 className="font-serif text-3xl text-white mb-2">{selectedProperty.title}</h2>
-                <div className="text-sm font-mono text-amber-300 mb-6">{selectedProperty.price} · {selectedProperty.location}</div>
+                <div className="text-sm font-mono text-amber-300 mb-6">{selectedProperty.price} Â· {selectedProperty.location}</div>
 
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
                   {selectedProperty.desc} Designed with monolithic structural concrete, floor-to-ceiling thermal glazing, bespoke Italian joinery, and uninterrupted panoramic orientations.
@@ -354,97 +354,97 @@ export const Arcstone: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_luxury_villa_1790952149752.jpg"
+              src="/AivionTech/assets/images/arcstone_luxury_villa_1790952149752.jpg"
               alt="Coastal Cantilever Villa"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Cliffside Cantilever · Big Sur</span>
+              <span className="text-xs font-serif text-white">Cliffside Cantilever Â· Big Sur</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_penthouse_1790954114244.jpg"
+              src="/AivionTech/assets/images/arcstone_penthouse_1790954114244.jpg"
               alt="Skyline Penthouse Salon"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Panorama Salon · New York</span>
+              <span className="text-xs font-serif text-white">Panorama Salon Â· New York</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_chalet_1790954133304.jpg"
+              src="/AivionTech/assets/images/arcstone_chalet_1790954133304.jpg"
               alt="Alpine Stone Chalet"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Alpine Thermal Hearth · Zermatt</span>
+              <span className="text-xs font-serif text-white">Alpine Thermal Hearth Â· Zermatt</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_coastal_1790954148486.jpg"
+              src="/AivionTech/assets/images/arcstone_coastal_1790954148486.jpg"
               alt="Basalt Ocean Mooring"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Basalt Cove Mooring · Hawaii</span>
+              <span className="text-xs font-serif text-white">Basalt Cove Mooring Â· Hawaii</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_city_residence_1790954617128.jpg"
+              src="/AivionTech/assets/images/arcstone_city_residence_1790954617128.jpg"
               alt="Volcanic Stone City Residence"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Zen Motor Court · Tokyo</span>
+              <span className="text-xs font-serif text-white">Zen Motor Court Â· Tokyo</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_desert_villa_1790954585486.jpg"
+              src="/AivionTech/assets/images/arcstone_desert_villa_1790954585486.jpg"
               alt="Rammed Earth Desert Pavilion"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Rammed Earth Pavilion · Palm Springs</span>
+              <span className="text-xs font-serif text-white">Rammed Earth Pavilion Â· Palm Springs</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_forest_retreat_1790954602098.jpg"
+              src="/AivionTech/assets/images/arcstone_forest_retreat_1790954602098.jpg"
               alt="Misty Stream Forest Retreat"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Suspended Forest Cantilever · Aspen</span>
+              <span className="text-xs font-serif text-white">Suspended Forest Cantilever Â· Aspen</span>
             </div>
           </div>
 
           <div className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-950 border border-white/10">
             <img
-              src="/src/assets/images/arcstone_contemporary_home_1790954634423.jpg"
+              src="/AivionTech/assets/images/arcstone_contemporary_home_1790954634423.jpg"
               alt="Curvilinear Concrete Home"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
-              <span className="text-xs font-serif text-white">Curvilinear Water Pavilion · Lugano</span>
+              <span className="text-xs font-serif text-white">Curvilinear Water Pavilion Â· Lugano</span>
             </div>
           </div>
         </div>
@@ -458,10 +458,11 @@ export const Arcstone: React.FC = () => {
             <div className="text-[11px] mt-0.5">Real Estate Demonstration built by AIVION TECH</div>
           </div>
           <div>
-            <a href="/" className="text-amber-400 hover:underline">← Return to AIVION TECH Software House</a>
+            <a href="/" className="text-amber-400 hover:underline">â† Return to AIVION TECH Software House</a>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ArrowLeft, ChevronDown, Layers } from 'lucide-react';
 import { DEMO_PROJECTS } from '../data/companyData';
 
@@ -20,7 +20,7 @@ export const DemoHeader: React.FC<DemoHeaderProps> = ({ currentDemoId }) => {
           className="inline-flex items-center gap-2 text-xs sm:text-sm font-mono tracking-wider text-cyan-400 hover:text-cyan-300 transition-colors py-1 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          <span className="font-semibold">← Back to AIVION TECH</span>
+          <span className="font-semibold">â† Back to AIVION TECH</span>
         </a>
 
         {/* Current Demo Tag and Switcher Dropdown */}
@@ -28,7 +28,7 @@ export const DemoHeader: React.FC<DemoHeaderProps> = ({ currentDemoId }) => {
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-gray-400">
             <span className="text-gray-500">Live Client Demo:</span>
             <span className="text-white font-bold">{currentDemo.name}</span>
-            <span className="text-gray-600">·</span>
+            <span className="text-gray-600">Â·</span>
             <span className="text-cyan-400/80">{currentDemo.category}</span>
           </div>
 
@@ -73,3 +73,8 @@ export const DemoHeader: React.FC<DemoHeaderProps> = ({ currentDemoId }) => {
     </div>
   );
 };
+
+
+
+
+
