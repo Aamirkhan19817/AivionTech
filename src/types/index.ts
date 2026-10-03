@@ -5,6 +5,7 @@ export interface TeamMember {
   initials: string;
   color: string;
   accent: string;
+  image?: string;
 }
 
 export interface ServiceItem {

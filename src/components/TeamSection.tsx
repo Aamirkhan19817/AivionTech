@@ -2,43 +2,52 @@ import React, { useState } from 'react';
 import { TEAM_MEMBERS } from '../data/companyData';
 import { TeamCanvas } from './TeamCanvas';
 import { TeamMember } from '../types';
+import { ScrollReveal } from './ScrollReveal';
 
 export const TeamSection: React.FC = () => {
   const [hoveredMember, setHoveredMember] = useState<string | null>(null);
 
   return (
-    <section id="team" className="relative py-24 sm:py-32 bg-gray-950 overflow-hidden">
+    <section id="team" className="relative py-24 sm:py-32 bg-gray-950">
       {/* 3D Digital Room Background with Core and Network Lines */}
       <TeamCanvas />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="text-xs font-mono tracking-[0.25em] text-cyan-400 uppercase mb-3">
-            LEADERSHIP & GOVERNANCE
+      <ScrollReveal variant="3d-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header with Scroll Reveal */}
+        <ScrollReveal variant="fade-up">
+          <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+            <div className="text-xs font-mono tracking-[0.25em] text-cyan-400 uppercase mb-3">
+              LEADERSHIP & GOVERNANCE
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+              OUR TEAM
+            </h2>
+            <p className="mt-3 text-base sm:text-lg text-gray-400">
+              Meet the people behind AIVION TECH.
+            </p>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            OUR TEAM
-          </h2>
-          <p className="mt-3 text-base sm:text-lg text-gray-400">
-            Meet the people behind AIVION TECH.
-          </p>
-        </div>
+        </ScrollReveal>
 
-        {/* 4 Team Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* 5 Team Cards Grid with Staggered Scroll Reveal */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-6">
           {TEAM_MEMBERS.map((member, index) => (
-            <TeamMemberCard
+            <ScrollReveal
               key={member.id}
-              member={member}
-              index={index}
-              isHovered={hoveredMember === member.id}
-              onHover={() => setHoveredMember(member.id)}
-              onLeave={() => setHoveredMember(null)}
-            />
+              variant="3d-stagger"
+              delay={index * 100}
+              className="h-full"
+            >
+              <TeamMemberCard
+                member={member}
+                index={index}
+                isHovered={hoveredMember === member.id}
+                onHover={() => setHoveredMember(member.id)}
+                onLeave={() => setHoveredMember(null)}
+              />
+            </ScrollReveal>
           ))}
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 };
@@ -104,7 +113,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         />
       </div>
 
-      {/* Holographic Initial-Based 3D Avatar */}
+      {/* 3D Avatar Container */}
       <div className="relative w-28 h-28 my-3 flex items-center justify-center">
         {/* Outer Orbiting Holographic Rings */}
         <div
@@ -126,17 +135,26 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         <div
           className={`relative w-20 h-20 rounded-full bg-gradient-to-br ${member.color} border flex items-center justify-center transition-all duration-300 overflow-hidden ${
             isHovered
-              ? 'border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.4)]'
-              : 'border-white/15'
+              ? 'border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.6)]'
+              : 'border-white/15 shadow-lg'
           }`}
         >
-          {/* Internal Geometric Mesh Lines */}
-          <div className="absolute inset-0 opacity-25 subtle-grid" />
-
-          {/* Initial Glyph */}
-          <span className="font-display font-bold text-2xl tracking-wider text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] select-none">
-            {member.initials}
-          </span>
+          {member.image ? (
+            <img 
+              src={member.image} 
+              alt={member.name} 
+              className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`} 
+            />
+          ) : (
+            <>
+              {/* Internal Geometric Mesh Lines */}
+              <div className="absolute inset-0 opacity-25 subtle-grid" />
+              {/* Initial Glyph */}
+              <span className="font-display font-bold text-2xl tracking-wider text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] select-none">
+                {member.initials}
+              </span>
+            </>
+          )}
         </div>
       </div>
 

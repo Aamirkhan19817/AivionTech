@@ -6,7 +6,7 @@ export const COMPANY_INFO = {
   tagline: "Your Vision | Our Code",
   email: "aiviontech01@gmail.com",
   phone: "0313-0524729",
-  address: "Your Office Address Here",
+  address: "SSA, Sarwar Rd, Barakahu, Islamabad",
   description: "We design and build modern digital experiences, intelligent applications, and powerful software solutions.",
   aboutHeading: "WE TURN IDEAS INTO DIGITAL PRODUCTS.",
   aboutText: "AIVION TECH is a software house focused on creating modern digital experiences, intelligent applications and custom software solutions."
@@ -20,6 +20,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     initials: "MK",
     color: "from-cyan-500/20 to-blue-600/30",
     accent: "#06b6d4"
+  },
+  {
+    id: "coo",
+    name: "Akram Latif",
+    role: "COO",
+    initials: "AL",
+    color: "from-indigo-500/20 to-violet-600/30",
+    accent: "#8b5cf6"
   },
   {
     id: "hr",

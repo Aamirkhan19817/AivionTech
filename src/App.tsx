@@ -8,9 +8,11 @@ import { TeamSection } from './components/TeamSection';
 import { MirrorHallSection } from './components/MirrorHallSection';
 import { TechSection } from './components/TechSection';
 import { ProcessSection } from './components/ProcessSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
+import { LoadingScreen } from './components/LoadingScreen';
 
 // Import Demo components
 import { NoorTable } from './demos/NoorTable';
@@ -23,6 +25,7 @@ import { VertexGroup } from './demos/VertexGroup';
 import { MonoStudio } from './demos/MonoStudio';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [currentSearch, setCurrentSearch] = useState(window.location.search);
 
@@ -110,7 +113,15 @@ export default function App() {
 
   // AIVION TECH MAIN HOMEPAGE
   return (
-    <div className="relative min-h-screen bg-[#030712] text-white selection:bg-cyan-500/30 font-sans">
+    <>
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      <div
+        className="relative min-h-screen bg-[#030712] text-white selection:bg-cyan-500/30 font-sans"
+        style={{
+          opacity: isLoading ? 0 : 1,
+          transition: 'opacity 0.5s ease-in-out',
+        }}
+      >
       {/* Custom Desktop Cursor */}
       <CustomCursor />
 
@@ -141,11 +152,15 @@ export default function App() {
       {/* 8. Development Process (4 Steps with Glowing Pipeline Connection) */}
       <ProcessSection />
 
+      {/* Testimonials & Enterprise Client Endorsements */}
+      <TestimonialsSection />
+
       {/* 9. Contact (Inquiry Form, Phone, Email, Office Address) */}
       <ContactSection />
 
       {/* 10. Footer */}
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }
