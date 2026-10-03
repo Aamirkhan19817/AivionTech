@@ -1,37 +1,40 @@
-import tailwindcss from '@tailwindcss/vite';
+﻿import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
+import { fileURLToPath, URL } from 'node:url';
 
-export default defineConfig(() => {
-  return {
-    plugins: [react(), tailwindcss()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
+export default defineConfig({
+  base: '/AivionTech/',
+
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./', import.meta.url)),
+    },
+  },
+
+  build: {
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        restaurant: fileURLToPath(new URL('./demos/restaurant.html', import.meta.url)),
+        ecommerce: fileURLToPath(new URL('./demos/ecommerce.html', import.meta.url)),
+        saas: fileURLToPath(new URL('./demos/saas.html', import.meta.url)),
+        ai: fileURLToPath(new URL('./demos/ai.html', import.meta.url)),
+        mobileApp: fileURLToPath(new URL('./demos/mobile-app.html', import.meta.url)),
+        realEstate: fileURLToPath(new URL('./demos/real-estate.html', import.meta.url)),
+        corporate: fileURLToPath(new URL('./demos/corporate.html', import.meta.url)),
+        creativeStudio: fileURLToPath(new URL('./demos/creative-studio.html', import.meta.url)),
       },
     },
-    build: {
-      rollupOptions: {
-        input: {
-          main: path.resolve(__dirname, 'index.html'),
-          restaurant: path.resolve(__dirname, 'demos/restaurant.html'),
-          ecommerce: path.resolve(__dirname, 'demos/ecommerce.html'),
-          saas: path.resolve(__dirname, 'demos/saas.html'),
-          ai: path.resolve(__dirname, 'demos/ai.html'),
-          mobileApp: path.resolve(__dirname, 'demos/mobile-app.html'),
-          realEstate: path.resolve(__dirname, 'demos/real-estate.html'),
-          corporate: path.resolve(__dirname, 'demos/corporate.html'),
-          creativeStudio: path.resolve(__dirname, 'demos/creative-studio.html'),
-        },
-      },
-    },
-    server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modify—file watching is disabled to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
-      watch: process.env.DISABLE_HMR === 'true' ? null : {},
-    },
-  };
+  },
+
+  server: {
+    hmr: process.env.DISABLE_HMR !== 'true',
+    watch: process.env.DISABLE_HMR === 'true' ? null : {},
+  },
 });
