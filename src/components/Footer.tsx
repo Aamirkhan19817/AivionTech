@@ -1,22 +1,38 @@
-﻿import React from 'react';
+import React from 'react';
 import { COMPANY_INFO, SERVICES } from '../data/companyData';
 import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
+import { SectionId } from '../types/navigation';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (section: SectionId) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (onNavigate) {
+      onNavigate('home');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
-  const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Team', href: '#team' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Technology', href: '#technology' },
-    { name: 'Process', href: '#process' },
-    { name: 'Contact', href: '#contact' },
+  const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: SectionId) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(sectionId);
+    }
+  };
+
+  const quickLinks: { name: string; id: SectionId }[] = [
+    { name: 'Home', id: 'home' },
+    { name: 'Services', id: 'services' },
+    { name: 'About', id: 'about' },
+    { name: 'Team', id: 'team' },
+    { name: 'Portfolio', id: 'portfolio' },
+    { name: 'Technology', id: 'technology' },
+    { name: 'Process', id: 'process' },
+    { name: 'Contact', id: 'contact' },
   ];
 
   return (
@@ -54,8 +70,9 @@ export const Footer: React.FC = () => {
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <a
-                      href={link.href}
-                      className="text-xs text-gray-400 hover:text-white transition-colors"
+                      href={`#${link.id}`}
+                      onClick={(e) => handleLink(e, link.id)}
+                      className="text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                     >
                       {link.name}
                     </a>
@@ -76,7 +93,8 @@ export const Footer: React.FC = () => {
                   <li key={s.number}>
                     <a
                       href="#services"
-                      className="text-xs text-gray-400 hover:text-white transition-colors"
+                      onClick={(e) => handleLink(e, 'services')}
+                      className="text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                     >
                       {s.title}
                     </a>
@@ -124,16 +142,16 @@ export const Footer: React.FC = () => {
         <ScrollReveal variant="fade-in" delay={400}>
           <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs text-gray-400 font-mono">
-              Â© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
+              © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
             </div>
 
             <div className="flex items-center gap-6">
               <span className="text-[11px] font-mono text-gray-400">
-                SOFTWARE HOUSE Â· {COMPANY_INFO.tagline}
+                SOFTWARE HOUSE · {COMPANY_INFO.tagline}
               </span>
               <button
                 onClick={scrollToTop}
-                aria-label="Scroll to top"
+                aria-label="Return to home"
                 className="p-2 rounded-full border border-white/10 hover:border-cyan-400/50 text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <ArrowUp className="w-4 h-4" />
@@ -145,8 +163,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
-
-
-
-

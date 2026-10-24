@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   delay = 0,
   duration = 800,
   className = '',
-  threshold = 0.12,
+  threshold = 0.08,
   once = false,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +28,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     if (!element) return;
 
     // Small delay so the browser renders the element in its HIDDEN state first
-    // Then the observer fires and animates it in â€” this gives page-load animations too
+    // Then the observer fires and animates it in — this gives page-load animations too
     const startTimer = setTimeout(() => {
       observerRef.current = new IntersectionObserver(
         ([entry]) => {
@@ -40,12 +40,13 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
           }
         },
         {
+          // Relaxed rootMargin so elements immediately in view after section switch are revealed
           threshold,
-          rootMargin: '0px 0px -40px 0px',
+          rootMargin: '0px 0px 0px 0px',
         }
       );
       observerRef.current.observe(element);
-    }, 100); // 100ms so hidden state renders first
+    }, 60); // slightly tighter than original 100ms for snappier feel after section transition
 
     return () => {
       clearTimeout(startTimer);
@@ -53,7 +54,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     };
   }, [threshold, once]);
 
-  // â”€â”€â”€ Transform definitions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─── Transform definitions ────────────────────────────────────────────────
 
   const getHiddenTransform = () => {
     switch (variant) {
@@ -91,7 +92,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     return 'blur(0px)';
   };
 
-  // â”€â”€â”€ Build final style â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─── Build final style ────────────────────────────────────────────────────
 
   const style: React.CSSProperties = {
     opacity: isVisible ? 1 : 0,
@@ -111,8 +112,3 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     </div>
   );
 };
-
-
-
-
-

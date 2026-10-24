@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 export const TeamCanvas: React.FC = () => {
@@ -50,9 +50,9 @@ export const TeamCanvas: React.FC = () => {
     teamGroup.add(ring);
 
     // Subtle connection network lines representing:
-    // CEO (top-left) â†˜
-    // CTO (bottom-left) â†’ AIVION TECH CORE â† CMO (top-right)
-    // HR (bottom-right) â†—
+    // Member 1: Founder & CEO (Left)
+    // Member 2: CTO (Center-top)
+    // Member 3: HR (Right)
     const lineMat = new THREE.LineBasicMaterial({
       color: 0x0ea5e9,
       transparent: true,
@@ -60,10 +60,9 @@ export const TeamCanvas: React.FC = () => {
     });
 
     const positions = [
-      new THREE.Vector3(-14, 7, -2), // CEO
-      new THREE.Vector3(-14, -7, -2), // CTO
-      new THREE.Vector3(14, 7, -2), // CMO
-      new THREE.Vector3(14, -7, -2), // HR
+      new THREE.Vector3(-14, 2, -2), // Member 1: Founder & CEO
+      new THREE.Vector3(0, 10, -2),  // Member 2: CTO
+      new THREE.Vector3(14, 2, -2),  // Member 3: HR
     ];
 
     const lines: THREE.Line[] = [];
@@ -156,8 +155,3 @@ export const TeamCanvas: React.FC = () => {
     </div>
   );
 };
-
-
-
-
-

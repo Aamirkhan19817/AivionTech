@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { SERVICES } from '../data/companyData';
 import { Globe, Smartphone, Cpu, Code, ArrowRight } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -10,13 +10,21 @@ const iconMap: Record<string, React.ReactNode> = {
   Code: <Code className="w-6 h-6 text-sky-400" />,
 };
 
-export const ServicesSection: React.FC = () => {
+interface ServicesSectionProps {
+  onNavigate?: (id: string) => void;
+}
+
+export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigate }) => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   const handleConsultClick = (title: string) => {
-    const el = document.getElementById('contact');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    if (onNavigate) {
+      onNavigate('contact');
+    } else {
+      const el = document.getElementById('contact');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -123,8 +131,3 @@ export const ServicesSection: React.FC = () => {
     </section>
   );
 };
-
-
-
-
-

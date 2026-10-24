@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
@@ -94,8 +94,3 @@ export const CustomCursor: React.FC = () => {
     </>
   );
 };
-
-
-
-
-

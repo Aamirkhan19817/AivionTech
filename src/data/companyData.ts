@@ -1,4 +1,4 @@
-﻿import { TeamMember, ServiceItem, DemoProject } from '../types';
+import { TeamMember, ServiceItem, DemoProject } from '../types';
 
 export const COMPANY_INFO = {
   name: "AIVION TECH",
@@ -14,44 +14,37 @@ export const COMPANY_INFO = {
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    id: "ceo",
+    id: "founder-ceo",
     name: "Muhammad Aamir Khan",
-    role: "CEO",
+    designation: "Founder & CEO",
+    role: "Founder & CEO",
+    fullTitle: "Founder and Chief Executive Officer",
+    description: "Leads the company's overall vision, business strategy, client relationships, and growth.",
     initials: "MK",
     color: "from-cyan-500/20 to-blue-600/30",
     accent: "#06b6d4"
   },
   {
-    id: "coo",
-    name: "Akram Latif",
-    role: "COO",
-    initials: "AL",
-    color: "from-indigo-500/20 to-violet-600/30",
-    accent: "#8b5cf6"
-  },
-  {
-    id: "hr",
-    name: "Mubashir Salim",
-    role: "HR",
-    initials: "MS",
-    color: "from-blue-500/20 to-indigo-600/30",
-    accent: "#3b82f6"
-  },
-  {
     id: "cto",
     name: "Mujeeb ur Rehman",
+    designation: "CTO",
     role: "CTO",
+    fullTitle: "Chief Technology Officer",
+    description: "Leads technical strategy, software development, engineering decisions, and technology architecture.",
     initials: "MR",
     color: "from-teal-500/20 to-cyan-600/30",
     accent: "#14b8a6"
   },
   {
-    id: "cmo",
-    name: "Amanullah",
-    role: "CMO",
-    initials: "A",
-    color: "from-sky-500/20 to-blue-700/30",
-    accent: "#0ea5e9"
+    id: "hr",
+    name: "Mubashir Salim",
+    designation: "HR",
+    role: "HR",
+    fullTitle: "Human Resources",
+    description: "Manages human resources, team coordination, recruitment, and employee-related activities.",
+    initials: "MS",
+    color: "from-indigo-500/20 to-violet-600/30",
+    accent: "#8b5cf6"
   }
 ];
 
@@ -100,104 +93,104 @@ export const DEMO_PROJECTS: DemoProject[] = [
     id: "restaurant",
     name: "NOOR TABLE",
     category: "Restaurant / Food",
-    path: "/AivionTech/demos/restaurant",
-    htmlPath: "/AivionTech/demos/restaurant.html",
+    path: "/demos/restaurant",
+    htmlPath: "/demos/restaurant.html",
     tagline: "Artisan Gastronomy & Midnight Dining Experience",
     description: "A dark, warm, and sophisticated fine dining experience with an artisan tasting menu, sommelier pairings, and seamless real-time table reservations.",
-    style: "Elegant Â· Dark Â· Premium Â· Warm",
+    style: "Elegant · Dark · Premium · Warm",
     accent: "#eab308",
-    image: "/AivionTech/assets/images/culinary_noor_table_1790952115305.jpg",
+    image: "/src/assets/images/culinary_noor_table_1790952115305.jpg",
     highlights: ["Interactive Tasting Menu", "Real-Time Reservation Modal", "Sommelier Cellar Showcase", "Chef's Table Experience"]
   },
   {
     id: "ecommerce",
     name: "VANTA STORE",
     category: "E-Commerce",
-    path: "/AivionTech/demos/ecommerce",
-    htmlPath: "/AivionTech/demos/ecommerce.html",
+    path: "/demos/ecommerce",
+    htmlPath: "/demos/ecommerce.html",
     tagline: "Minimalist Obsidian Hardware & Designer Acoustics",
     description: "An ultra-refined minimal luxury store featuring bespoke acoustic hardware, interactive drawer cart, instant search filtering, and seamless checkout experience.",
-    style: "Modern Â· Minimal Â· Premium",
+    style: "Modern · Minimal · Premium",
     accent: "#06b6d4",
-    image: "/AivionTech/assets/images/vanta_minimal_audio_1790952130423.jpg",
+    image: "/src/assets/images/vanta_minimal_audio_1790952130423.jpg",
     highlights: ["Interactive Drawer Cart", "Instant Category Filtering", "Wishlist & Quick-View Modal", "Zero-Latency Checkout Flow"]
   },
   {
     id: "saas",
     name: "FLOWSTACK",
     category: "SaaS Platform",
-    path: "/AivionTech/demos/saas",
-    htmlPath: "/AivionTech/demos/saas.html",
+    path: "/demos/saas",
+    htmlPath: "/demos/saas.html",
     tagline: "Unified Cloud Infrastructure & Developer Velocity",
     description: "A high-velocity SaaS operations platform with interactive telemetry graphs, feature tabs, annual/monthly pricing calculator, and enterprise ROI proof.",
-    style: "Sleek Â· High-Velocity Â· Cloud Native",
+    style: "Sleek · High-Velocity · Cloud Native",
     accent: "#3b82f6",
-    image: "/AivionTech/assets/images/saas_flowstack_preview_1790954815731.jpg",
+    image: "/src/assets/images/saas_flowstack_preview_1790954815731.jpg",
     highlights: ["Live Analytics Dashboard Preview", "Monthly/Annual Pricing Toggle", "Feature Capability Matrix", "Interactive FAQ Accordion"]
   },
   {
     id: "ai",
     name: "NEURALCORE",
     category: "AI & Machine Learning",
-    path: "/AivionTech/demos/ai",
-    htmlPath: "/AivionTech/demos/ai.html",
+    path: "/demos/ai",
+    htmlPath: "/demos/ai.html",
     tagline: "Autonomous Machine Intelligence & Model Workflows",
     description: "A technical AI platform featuring real-time neural topology rendering, inference latency metrics, automated pipeline orchestrator, and interactive model playground.",
-    style: "Futuristic Â· Technical Â· Advanced",
+    style: "Futuristic · Technical · Advanced",
     accent: "#10b981",
-    image: "/AivionTech/assets/images/ai_neuralcore_preview_1790954831631.jpg",
+    image: "/src/assets/images/ai_neuralcore_preview_1790954831631.jpg",
     highlights: ["Live Neural Network Topology", "Inference Benchmark Simulator", "Automated Pipeline Engine", "Enterprise Model Endpoints"]
   },
   {
     id: "mobile-app",
     name: "PULSE",
     category: "Mobile Application",
-    path: "/AivionTech/demos/mobile-app",
-    htmlPath: "/AivionTech/demos/mobile-app.html",
+    path: "/demos/mobile-app",
+    htmlPath: "/demos/mobile-app.html",
     tagline: "Biometric Telemetry & Autonomous Wellness OS",
     description: "An interactive mobile application showcase featuring an interactive 3D phone frame mockup with screen switching, health metrics telemetry, and QR download simulator.",
-    style: "Dynamic Â· Ergonomic Â· Mobile-First",
+    style: "Dynamic · Ergonomic · Mobile-First",
     accent: "#ec4899",
-    image: "/AivionTech/assets/images/mobile_pulse_preview_1790954847686.jpg",
+    image: "/src/assets/images/mobile_pulse_preview_1790954847686.jpg",
     highlights: ["Interactive 3D Phone Screen Switcher", "Biometric Vitals Dashboard", "Haptic Experience Showcase", "Instant QR App Clip Demo"]
   },
   {
     id: "real-estate",
     name: "ARCSTONE",
     category: "Real Estate",
-    path: "/AivionTech/demos/real-estate",
-    htmlPath: "/AivionTech/demos/real-estate.html",
+    path: "/demos/real-estate",
+    htmlPath: "/demos/real-estate.html",
     tagline: "Architectural Masterpieces & Prime Coastal Sanctuaries",
     description: "A luxury architectural property showcase with dynamic price and typography filters, interactive floorplan viewer, private showing reservation, and curated locations.",
-    style: "Luxury Â· Elegant Â· Professional",
+    style: "Luxury · Elegant · Professional",
     accent: "#f59e0b",
-    image: "/AivionTech/assets/images/arcstone_luxury_villa_1790952149752.jpg",
+    image: "/src/assets/images/arcstone_luxury_villa_1790952149752.jpg",
     highlights: ["Filter by Price & Archetype", "Full-Screen Architectural Modal", "Interactive Virtual Showing Form", "Global Sanctuary Locations"]
   },
   {
     id: "corporate",
     name: "VERTEX GROUP",
     category: "Corporate Enterprise",
-    path: "/AivionTech/demos/corporate",
-    htmlPath: "/AivionTech/demos/corporate.html",
+    path: "/demos/corporate",
+    htmlPath: "/demos/corporate.html",
     tagline: "Strategic Capital & Enterprise Transformation",
     description: "A commanding enterprise advisory platform with interactive global performance metrics, sector dossiers, senior advisory governance, and private inquiry desk.",
-    style: "Authoritative Â· Global Â· Strategic",
+    style: "Authoritative · Global · Strategic",
     accent: "#64748b",
-    image: "/AivionTech/assets/images/vertex_corporate_hq_1790954179058.jpg",
+    image: "/src/assets/images/vertex_corporate_hq_1790954179058.jpg",
     highlights: ["Key Enterprise Indicators", "Global Sector Focus Areas", "Advisory Governance Board", "Institutional Inquiry Portal"]
   },
   {
     id: "creative-studio",
     name: "MONO STUDIO",
     category: "Creative Studio",
-    path: "/AivionTech/demos/creative-studio",
-    htmlPath: "/AivionTech/demos/creative-studio.html",
+    path: "/demos/creative-studio",
+    htmlPath: "/demos/creative-studio.html",
     tagline: "Kinetic Spatial Art & Avant-Garde Digital Objects",
     description: "An experimental brutalist digital atelier featuring dynamic kinetic project showcases, multidisciplinary manifesto, typography experiments, and custom commissions.",
-    style: "Editorial Â· Creative Â· Experimental",
+    style: "Editorial · Creative · Experimental",
     accent: "#a855f7",
-    image: "/AivionTech/assets/images/mono_studio_art_1790952166074.jpg",
+    image: "/src/assets/images/mono_studio_art_1790952166074.jpg",
     highlights: ["Kinetic Art Installation Gallery", "Disciplinary Philosophy Manifesto", "Full-Bleed Exhibition Modal", "Commission Request Portal"]
   }
 ];
@@ -236,5 +229,3 @@ export const PROCESS_STEPS = [
     detail: "Comprehensive automated and manual QA, load stress testing, deployment, and seamless production handover."
   }
 ];
-
-

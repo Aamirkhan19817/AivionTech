@@ -1,13 +1,21 @@
-﻿import React from 'react';
+import React from 'react';
 import { TunnelWormholeCanvas } from './TunnelWormholeCanvas';
 import { ScrollReveal } from './ScrollReveal';
 import { ArrowDown, Sparkles, ChevronRight } from 'lucide-react';
 
-export const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onNavigate?: (id: string) => void;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
   const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    if (onNavigate) {
+      onNavigate(id);
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -23,7 +31,7 @@ export const HeroSection: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-6 text-xs sm:text-sm font-mono tracking-[0.2em] text-cyan-400/90 uppercase">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
             <span>Next-Generation Software House</span>
-            <span className="text-gray-600">Â·</span>
+            <span className="text-gray-600">·</span>
             <span>Digital Laboratory</span>
           </div>
         </ScrollReveal>
@@ -31,10 +39,10 @@ export const HeroSection: React.FC = () => {
         {/* Main Heading: YOUR VISION. OUR CODE. */}
         <ScrollReveal variant="fade-up" delay={120}>
           <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white mb-6 leading-[1.08] select-none">
-            <span className="block drop-shadow-[0_2px_24px_rgba(0,0,0,0.9)]">
+            <span className="block drop-shadow-[0_4px_32px_rgba(0,0,0,0.95)]">
               YOUR VISION.
             </span>
-            <span className="block bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_4px_30px_rgba(6,182,212,0.4)]">
+            <span className="block bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_4px_35px_rgba(6,182,212,0.6)] [filter:drop-shadow(0_4px_24px_rgba(0,0,0,0.9))]">
               OUR CODE.
             </span>
           </h1>
@@ -84,8 +92,3 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
-
-
-
-
-

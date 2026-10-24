@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { TEAM_MEMBERS } from '../data/companyData';
 import { TeamCanvas } from './TeamCanvas';
 import { TeamMember } from '../types';
@@ -8,7 +8,7 @@ export const TeamSection: React.FC = () => {
   const [hoveredMember, setHoveredMember] = useState<string | null>(null);
 
   return (
-    <section id="team" className="relative py-24 sm:py-32 bg-gray-950">
+    <section id="team" className="relative pt-28 sm:pt-36 pb-24 sm:pb-32 bg-gray-950">
       {/* 3D Digital Room Background with Core and Network Lines */}
       <TeamCanvas />
 
@@ -28,13 +28,13 @@ export const TeamSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        {/* 5 Team Cards Grid with Staggered Scroll Reveal */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-6">
+        {/* 3 Team Cards Grid with Staggered Scroll Reveal */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {TEAM_MEMBERS.map((member, index) => (
             <ScrollReveal
               key={member.id}
               variant="3d-stagger"
-              delay={index * 100}
+              delay={index * 120}
               className="h-full"
             >
               <TeamMemberCard
@@ -87,14 +87,14 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
       onMouseEnter={onHover}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group relative rounded-xl p-6 sm:p-7 transition-all duration-300 transform backdrop-blur-xl border flex flex-col items-center text-center cursor-default ${
+      className={`group relative rounded-2xl p-7 sm:p-8 transition-all duration-300 transform backdrop-blur-xl border flex flex-col items-center text-center cursor-default h-full ${
         isHovered
-          ? 'border-cyan-400/50 bg-gray-900/90 shadow-[0_15px_30px_-5px_rgba(6,182,212,0.2)]'
+          ? 'border-cyan-400/50 bg-gray-900/90 shadow-[0_15px_35px_-5px_rgba(6,182,212,0.25)]'
           : 'border-white/[0.08] bg-gray-900/40 hover:bg-gray-900/60'
       }`}
       style={{
         transform: `perspective(800px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg) ${
-          isHovered ? 'translateY(-4px)' : 'translateY(0)'
+          isHovered ? 'translateY(-6px)' : 'translateY(0)'
         }`,
         transition: 'transform 0.15s ease-out, border-color 0.25s, box-shadow 0.25s, background-color 0.25s',
       }}
@@ -105,16 +105,16 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           MEMBER 0{index + 1}
         </span>
         <span
-          className="w-1.5 h-1.5 rounded-full transition-all duration-300"
+          className="w-2 h-2 rounded-full transition-all duration-300"
           style={{
             backgroundColor: member.accent,
-            boxShadow: isHovered ? `0 0 10px ${member.accent}` : 'none',
+            boxShadow: isHovered ? `0 0 12px ${member.accent}` : 'none',
           }}
         />
       </div>
 
       {/* 3D Avatar Container */}
-      <div className="relative w-28 h-28 my-3 flex items-center justify-center">
+      <div className="relative w-28 h-28 my-2 flex items-center justify-center">
         {/* Outer Orbiting Holographic Rings */}
         <div
           className={`absolute inset-0 rounded-full border border-dashed transition-all duration-700 pointer-events-none ${
@@ -135,7 +135,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         <div
           className={`relative w-20 h-20 rounded-full bg-gradient-to-br ${member.color} border flex items-center justify-center transition-all duration-300 overflow-hidden ${
             isHovered
-              ? 'border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.6)]'
+              ? 'border-cyan-300 shadow-[0_0_24px_rgba(6,182,212,0.6)]'
               : 'border-white/15 shadow-lg'
           }`}
         >
@@ -160,26 +160,37 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
 
       {/* Member Name */}
       <h3
-        className={`font-display text-lg font-bold transition-colors duration-200 mt-4 mb-1 ${
-          isHovered ? 'text-white text-glow' : 'text-gray-200'
+        className={`font-display text-xl font-bold transition-colors duration-200 mt-4 mb-1 ${
+          isHovered ? 'text-white text-glow' : 'text-gray-100'
         }`}
       >
         {member.name}
       </h3>
 
-      {/* Role / Position */}
+      {/* Designation / Role */}
       <div className="mt-1 font-mono text-xs tracking-widest uppercase font-semibold text-cyan-400">
-        {member.role}
+        {member.designation || member.role}
       </div>
 
-      <div className="text-[11px] text-gray-500 tracking-wider font-mono mt-1">
-        AIVION TECH EXECUTIVE
+      {/* Full Title */}
+      {member.fullTitle && (
+        <div className="text-xs text-gray-400 tracking-wider font-mono mt-1">
+          {member.fullTitle}
+        </div>
+      )}
+
+      {/* Description */}
+      {member.description && (
+        <p className="mt-4 text-xs sm:text-sm text-gray-400 leading-relaxed font-normal text-balance flex-grow">
+          {member.description}
+        </p>
+      )}
+
+      {/* Card Footer */}
+      <div className="mt-6 pt-4 border-t border-white/[0.06] w-full flex items-center justify-between text-[11px] font-mono text-gray-500">
+        <span className="tracking-widest">AIVION TECH</span>
+        <span className="text-cyan-400/80">LEADERSHIP</span>
       </div>
     </div>
   );
 };
-
-
-
-
-
