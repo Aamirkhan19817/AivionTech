@@ -8,6 +8,9 @@ export const MirrorHallSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProject = DEMO_PROJECTS[activeIndex];
 
+  const getDemoUrl = (path: string) =>
+    `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? DEMO_PROJECTS.length - 1 : prev - 1));
   };
@@ -18,11 +21,9 @@ export const MirrorHallSection: React.FC = () => {
 
   return (
     <section id="portfolio" className="relative py-24 sm:py-36 bg-gray-950 border-t border-white/[0.04]">
-      {/* 3D WebGL Mirror Hall Environment (Reflective floor, floating glass portals, ambient fog) */}
       <MirrorHallCanvas activeIndex={activeIndex} />
 
       <ScrollReveal variant="3d-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <ScrollReveal variant="fade-up">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[0.25em] text-cyan-400 uppercase mb-3">
@@ -40,7 +41,6 @@ export const MirrorHallSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        {/* Exhibition Selector Ribbon (Interactive 8 project tabs) */}
         <ScrollReveal variant="fade-in" delay={100}>
           <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-4 mb-8 sm:mb-12 gap-2 no-scrollbar px-2">
             {DEMO_PROJECTS.map((project, idx) => {
@@ -63,10 +63,8 @@ export const MirrorHallSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        {/* Central Spotlight Exhibition Stage */}
         <ScrollReveal variant="fade-scale" delay={200}>
           <div className="relative max-w-5xl mx-auto">
-            {/* Controls: Prev / Next */}
             <div className="hidden sm:flex absolute -left-12 top-1/2 -translate-y-1/2 z-20">
               <button
                 onClick={handlePrev}
@@ -76,6 +74,7 @@ export const MirrorHallSection: React.FC = () => {
                 <ChevronLeft className="w-5 h-5" />
               </button>
             </div>
+
             <div className="hidden sm:flex absolute -right-12 top-1/2 -translate-y-1/2 z-20">
               <button
                 onClick={handleNext}
@@ -86,9 +85,7 @@ export const MirrorHallSection: React.FC = () => {
               </button>
             </div>
 
-            {/* Active Featured Project Card */}
             <div className="relative rounded-2xl bg-gray-900/85 border border-cyan-500/30 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(6,182,212,0.15)] overflow-hidden transition-all duration-300">
-              {/* Top Bar inside Card */}
               <div className="px-6 py-4 bg-gray-950/70 border-b border-white/[0.08] flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="w-3 h-3 rounded-full bg-red-500/60" />
@@ -103,9 +100,7 @@ export const MirrorHallSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Project Content Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 items-center">
-                {/* Left Column: Visual Exhibition Panel */}
                 <div className="lg:col-span-6 relative group">
                   <div className="relative rounded-xl overflow-hidden aspect-video border border-white/10 bg-gray-950 shadow-2xl">
                     {activeProject.image ? (
@@ -116,7 +111,6 @@ export const MirrorHallSection: React.FC = () => {
                         referrerPolicy="no-referrer"
                       />
                     ) : (
-                      /* High-tech styled abstract preview for projects without generated photo */
                       <div className="w-full h-full bg-gradient-to-br from-gray-900 via-cyan-950/40 to-gray-950 flex flex-col items-center justify-center p-6 text-center">
                         <Layers className="w-12 h-12 text-cyan-400/60 mb-3 animate-pulse" />
                         <div className="font-display font-bold text-xl text-white">
@@ -128,17 +122,14 @@ export const MirrorHallSection: React.FC = () => {
                       </div>
                     )}
 
-                    {/* Glass reflective overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent pointer-events-none" />
 
-                    {/* Bottom tag on image */}
                     <div className="absolute bottom-3 left-3 text-[11px] font-mono tracking-wider text-cyan-300 bg-gray-950/80 px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">
                       {activeProject.style}
                     </div>
                   </div>
                 </div>
 
-                {/* Right Column: Project Details & Action */}
                 <div className="lg:col-span-6 flex flex-col justify-between">
                   <div>
                     <div className="text-xs font-mono tracking-widest text-gray-400 uppercase mb-1">
@@ -154,7 +145,6 @@ export const MirrorHallSection: React.FC = () => {
                       {activeProject.description}
                     </p>
 
-                    {/* Highlights */}
                     <div className="space-y-2 mb-8">
                       <span className="text-xs font-mono tracking-wider text-gray-400 uppercase">
                         Architecture & Features:
@@ -170,10 +160,9 @@ export const MirrorHallSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* CRITICAL DEMO LINK */}
                   <div className="pt-4 border-t border-white/[0.08] flex flex-wrap items-center gap-4">
                     <a
-                      href={activeProject.htmlPath}
+                      href={getDemoUrl(activeProject.htmlPath)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2.5 px-6 py-3 text-xs sm:text-sm font-semibold tracking-wider uppercase text-gray-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 rounded-sm shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-200 transform hover:-translate-y-0.5"
@@ -183,7 +172,7 @@ export const MirrorHallSection: React.FC = () => {
                     </a>
 
                     <a
-                      href={activeProject.path}
+                      href={getDemoUrl(activeProject.path)}
                       className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-cyan-400 transition-colors py-2 px-3"
                     >
                       <span>Open in this tab</span>
@@ -193,7 +182,6 @@ export const MirrorHallSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Mobile Prev / Next Buttons */}
             <div className="flex sm:hidden items-center justify-between mt-4">
               <button
                 onClick={handlePrev}
@@ -214,7 +202,6 @@ export const MirrorHallSection: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        {/* 8 Demos Quick Grid */}
         <ScrollReveal variant="fade-up" delay={250}>
           <div className="mt-20 pt-16 border-t border-white/[0.06]">
             <div className="text-center mb-10">
@@ -230,7 +217,7 @@ export const MirrorHallSection: React.FC = () => {
               {DEMO_PROJECTS.map((project, idx) => (
                 <a
                   key={project.id}
-                  href={project.htmlPath}
+                  href={getDemoUrl(project.htmlPath)}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setActiveIndex(idx)}
